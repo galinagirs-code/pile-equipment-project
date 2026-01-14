@@ -64,7 +64,7 @@ export default function Index() {
                   Оборудование и машины<br/>для строительства свайных фундаментов
                 </h1>
                 
-                <p className="text-lg md:text-2xl text-secondary font-bold tracking-wider mb-8">
+                <p className="text-lg md:text-2xl text-secondary font-extrabold tracking-wider mb-8">
                   ПРОИЗВОДСТВО • ПОСТАВКА • СЕРВИС
                 </p>
                 
@@ -93,10 +93,12 @@ export default function Index() {
           </div>
 
           <div className="p-6 md:p-12">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center gap-3">
-              <Icon name="Package" className="text-secondary" size={32} />
-              Каталог оборудования
-            </h2>
+            <a href="https://kgs-ural.ru/catalog/" target="_blank" rel="noopener noreferrer" className="block mb-8 group">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary flex items-center gap-3 hover:text-secondary transition-colors">
+                <Icon name="Package" className="text-secondary group-hover:scale-110 transition-transform" size={32} />
+                Каталог оборудования
+              </h2>
+            </a>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {equipmentCategories.map((category, index) => (
@@ -119,14 +121,9 @@ export default function Index() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
-                          <Icon name={category.icon as any} className="text-secondary" size={28} />
-                        </div>
-                        <h3 className="font-heading font-bold text-lg text-primary group-hover:text-secondary transition-colors">
-                          {category.title}
-                        </h3>
-                      </div>
+                      <h3 className="font-heading font-bold text-lg text-primary group-hover:text-secondary transition-colors text-center">
+                        {category.title}
+                      </h3>
                     </CardContent>
                   </Card>
                 </a>
@@ -136,7 +133,7 @@ export default function Index() {
             <div className="text-center mb-12">
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
+                className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
                 asChild
               >
                 <a href="https://kgs-ural.ru/catalog/" target="_blank" rel="noopener noreferrer">
@@ -184,8 +181,7 @@ export default function Index() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
+                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
                   asChild
                 >
                   <a href="mailto:info@kgs-ural.ru">
