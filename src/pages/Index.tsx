@@ -2,14 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { useEffect, useState } from "react";
 
 const equipmentCategories = [
-  { icon: "Hammer", title: "Сваебойные молоты", url: "https://kgs-ural.ru/catalog/svaebojnye-moloty/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/bd634f85-f40d-4da6-ab00-513f1e425d7a.jpg" },
-  { icon: "Building2", title: "Копровые мачты", url: "https://kgs-ural.ru/catalog/machty-koprovye/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/92fec7c7-e45e-49b8-93ed-5d6b849688f7.jpg" },
-  { icon: "Waves", title: "Вибропогружатели экскаваторные", url: "https://kgs-ural.ru/catalog/vibropogruzhateli-ekskavatornye/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/5df88a84-e9e4-4d3a-835d-2cece1e95c1d.jpg" },
-  { icon: "Truck", title: "Сваебойные установки", url: "https://kgs-ural.ru/catalog/svaebojnye-mashiny/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/68277a70-a071-49e2-934a-374d89b80b6a.jpg" },
-  { icon: "CircleDot", title: "Свайные наголовники", url: "https://kgs-ural.ru/catalog/svajnye-nagolovniki/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/530c14c3-cd08-40bd-8d15-699120b31397.jpg" },
-  { icon: "Drill", title: "Буровые машины", url: "https://kgs-ural.ru/catalog/burovye-mashiny/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/7c9a8638-b0f2-479f-98df-05d199eee2f2.jpg" }
+  { icon: "Hammer", title: "Сваебойные молоты", url: "https://kgs-ural.ru/catalog/svaebojnye-moloty/", image: "https://cdn.poehali.dev/files/Сваебойные молоты.png" },
+  { icon: "Building2", title: "Копровые мачты", url: "https://kgs-ural.ru/catalog/machty-koprovye/", image: "https://cdn.poehali.dev/files/Копровые мачты.png" },
+  { icon: "Waves", title: "Вибропогружатели экскаваторные", url: "https://kgs-ural.ru/catalog/vibropogruzhateli-ekskavatornye/", image: "https://cdn.poehali.dev/files/Вибропогружатели экскаваторные.png" },
+  { icon: "Truck", title: "Сваебойные установки", url: "https://kgs-ural.ru/catalog/svaebojnye-mashiny/", image: "https://cdn.poehali.dev/files/Сваебойные машины.png" },
+  { icon: "CircleDot", title: "Свайные наголовники", url: "https://kgs-ural.ru/catalog/svajnye-nagolovniki/", image: "https://cdn.poehali.dev/files/Свайные наголовники.png" },
+  { icon: "Drill", title: "Буровые машины", url: "https://kgs-ural.ru/catalog/burovye-mashiny/", image: "https://cdn.poehali.dev/files/Буровые машины.png" }
 ];
 
 const services = [
@@ -21,6 +22,16 @@ const services = [
 ];
 
 export default function Index() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto p-4 md:p-8">
@@ -32,6 +43,7 @@ export default function Index() {
                   src="https://cdn.poehali.dev/files/с полом.png" 
                   alt="КГС Производство" 
                   className="w-full h-full object-cover"
+                  style={{ transform: `translateY(${scrollY * 0.3}px)` }}
                 />
                 <div className="absolute inset-0 bg-primary/85"></div>
               </div>
@@ -86,7 +98,7 @@ export default function Index() {
               Каталог оборудования
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {equipmentCategories.map((category, index) => (
                 <a 
                   key={index}
@@ -99,13 +111,12 @@ export default function Index() {
                     className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-secondary/20 animate-scale-in cursor-pointer overflow-hidden"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden bg-white">
                       <img 
                         src={category.image} 
                         alt={category.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
                     </div>
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4">
@@ -120,6 +131,19 @@ export default function Index() {
                   </Card>
                 </a>
               ))}
+            </div>
+
+            <div className="text-center mb-12">
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
+                asChild
+              >
+                <a href="https://kgs-ural.ru/catalog/" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Package" className="mr-2 group-hover:scale-110 transition-transform" size={20} />
+                  Полный каталог оборудования
+                </a>
+              </Button>
             </div>
 
             <div className="relative bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-10 mb-12 border border-primary/10 overflow-hidden">
