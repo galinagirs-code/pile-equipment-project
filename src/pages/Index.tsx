@@ -151,7 +151,7 @@ export default function Index() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="relative text-gray-800 font-medium mb-6 text-lg leading-relaxed">
+              <p className="relative text-primary font-medium mb-6 text-lg leading-relaxed">
                 <span className="font-heading text-2xl font-bold text-primary">КоперГруппСервис</span> предлагает комплексное обслуживание, обеспечивая своих клиентов всем необходимым для успешной реализации строительных проектов:
               </p>
               
@@ -165,7 +165,7 @@ export default function Index() {
                     <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Icon name="Check" className="text-white" size={16} />
                     </div>
-                    <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                    <p className="text-primary leading-relaxed group-hover:text-primary/80 transition-colors">
                       {service}
                     </p>
                   </div>
