@@ -280,13 +280,15 @@
             font-size: 20px;
             margin-bottom: 30px;
             line-height: 1.5;
+            padding: 0 10px;
         }
         .footer-buttons {
             display: flex;
-            gap: 30px;
+            gap: 15px;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             flex-wrap: wrap;
+            padding: 0 10px;
         }
         .telegram-button {
             background: #0088cc;
@@ -328,10 +330,21 @@
             }
             .contact-buttons {
                 flex-direction: column;
+                padding: 0 10px;
             }
             .button-primary, .button-outline {
                 width: 100%;
                 justify-content: center;
+            }
+            .footer-buttons {
+                flex-direction: column;
+            }
+            .button-outline, .telegram-button {
+                width: 100%;
+                justify-content: center;
+            }
+            .footer-tagline {
+                font-size: 18px;
             }
         }
     </style>

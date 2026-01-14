@@ -305,26 +305,26 @@ export default function Index() {
                   className="h-28 md:h-32 w-auto"
                 />
               </a>
-              <p className="text-primary font-bold mb-8 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+              <p className="text-primary font-bold mb-6 md:mb-8 text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto px-4">
                 КоперГруппСервис — надежный партнер в оборудовании для свайного фундаментостроения
               </p>
-              <div className="flex items-center justify-center gap-8">
+              <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-4 md:gap-8 px-4">
                 <Button 
                   variant="outline" 
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold text-lg px-6 py-3 rounded-xl group"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold text-base md:text-lg px-6 py-3 rounded-xl group w-full md:w-auto"
                   asChild
                 >
-                  <a href="https://kgs-ural.ru" target="_blank" rel="noopener noreferrer">
+                  <a href="https://kgs-ural.ru" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                     Посетить сайт
                     <Icon name="ExternalLink" className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={20} />
                   </a>
                 </Button>
                 <Button 
                   size="lg"
-                  className="bg-[#0088cc] hover:bg-[#0088cc]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all group"
+                  className="bg-[#0088cc] hover:bg-[#0088cc]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all group w-full md:w-auto"
                   asChild
                 >
-                  <a href="https://t.me/kgs_ural" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <a href="https://t.me/kgs_ural" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
                     </svg>
