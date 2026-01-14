@@ -4,12 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
 const equipmentCategories = [
-  { icon: "Hammer", title: "Сваебойные молоты", url: "https://kgs-ural.ru/catalog/svaebojnye-moloty/", image: "https://kgs-ural.ru/upload/iblock/d95/jf3e58o6a3y6a87lfxk4bw1vc0rlg06g.jpg" },
-  { icon: "Building2", title: "Копровые мачты", url: "https://kgs-ural.ru/catalog/machty-koprovye/", image: "https://kgs-ural.ru/upload/iblock/80e/hd3fccv93v9xhd7z1fqkkbxg4y8t3lal.jpg" },
-  { icon: "Waves", title: "Вибропогружатели экскаваторные", url: "https://kgs-ural.ru/catalog/vibropogruzhateli-ekskavatornye/", image: "https://kgs-ural.ru/upload/iblock/d00/vq5swccvb22yuw8p13t02x9ujmtwn0qk.jpg" },
-  { icon: "Truck", title: "Сваебойные установки", url: "https://kgs-ural.ru/catalog/svaebojnye-mashiny/", image: "https://kgs-ural.ru/upload/iblock/1a6/rgg97d78okx40ajgtspvj3ujbgpq60g3.jpg" },
-  { icon: "CircleDot", title: "Свайные наголовники", url: "https://kgs-ural.ru/catalog/svajnye-nagolovniki/", image: "https://kgs-ural.ru/upload/iblock/79a/o7nqbsf9wbp8cjt5jwtfmv6xk71zk9m9.jpg" },
-  { icon: "Drill", title: "Буровые машины", url: "https://kgs-ural.ru/catalog/burovye-mashiny/", image: "https://kgs-ural.ru/upload/iblock/6c7/ij3sxxf42zj17a2cqzwb2lh7c20rynsg.jpg" }
+  { icon: "Hammer", title: "Сваебойные молоты", url: "https://kgs-ural.ru/catalog/svaebojnye-moloty/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/bd634f85-f40d-4da6-ab00-513f1e425d7a.jpg" },
+  { icon: "Building2", title: "Копровые мачты", url: "https://kgs-ural.ru/catalog/machty-koprovye/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/92fec7c7-e45e-49b8-93ed-5d6b849688f7.jpg" },
+  { icon: "Waves", title: "Вибропогружатели экскаваторные", url: "https://kgs-ural.ru/catalog/vibropogruzhateli-ekskavatornye/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/5df88a84-e9e4-4d3a-835d-2cece1e95c1d.jpg" },
+  { icon: "Truck", title: "Сваебойные установки", url: "https://kgs-ural.ru/catalog/svaebojnye-mashiny/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/68277a70-a071-49e2-934a-374d89b80b6a.jpg" },
+  { icon: "CircleDot", title: "Свайные наголовники", url: "https://kgs-ural.ru/catalog/svajnye-nagolovniki/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/530c14c3-cd08-40bd-8d15-699120b31397.jpg" },
+  { icon: "Drill", title: "Буровые машины", url: "https://kgs-ural.ru/catalog/burovye-mashiny/", image: "https://cdn.poehali.dev/projects/dca3f2e0-4ba3-4ed4-8f33-fca6e97110b9/files/7c9a8638-b0f2-479f-98df-05d199eee2f2.jpg" }
 ];
 
 const services = [
@@ -188,7 +188,7 @@ export default function Index() {
                 <img 
                   src="https://cdn.poehali.dev/files/Логотип рабочий без фона.png" 
                   alt="КГС" 
-                  className="h-20 w-auto"
+                  className="h-28 md:h-32 w-auto"
                 />
               </a>
               <p className="text-gray-900 font-bold mb-8 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
