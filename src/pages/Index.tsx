@@ -141,13 +141,13 @@ export default function Index() {
               ))}
             </div>
 
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 px-4">
               <Button 
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
+                className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-sm md:text-base px-6 md:px-8 py-4 md:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group w-full md:w-auto"
                 asChild
               >
-                <a href="https://kgs-ural.ru/catalog/" target="_blank" rel="noopener noreferrer">
+                <a href="https://kgs-ural.ru/catalog/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                   <Icon name="Package" className="mr-2 group-hover:scale-110 transition-transform" size={20} />
                   Полный каталог оборудования
                 </a>
