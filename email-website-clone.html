@@ -77,12 +77,23 @@
         }
         
         .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
+            display: table;
+            width: 100%;
             margin-bottom: 32px;
+        }
+        
+        .header-top-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .header-top-cell:first-child {
+            width: 70%;
+        }
+        
+        .header-top-cell:last-child {
+            width: 30%;
+            text-align: right;
         }
         
         .logo-main {
@@ -107,8 +118,8 @@
             font-weight: 600;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             display: inline-block;
-            width: auto;
             white-space: nowrap;
+            max-width: 150px;
         }
         
         .header h1 {
@@ -441,11 +452,7 @@
         }
         
         .footer-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: stretch;
-            justify-content: center;
+            display: block;
             margin-top: 24px;
         }
         
@@ -458,10 +465,7 @@
         }
         
         .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: block;
             background: #F6A327;
             color: white;
             padding: 16px 32px;
@@ -473,7 +477,8 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            flex-shrink: 0;
+            margin-bottom: 16px;
+            box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
@@ -490,10 +495,7 @@
         }
         
         .btn-telegram {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: block;
             background: #0088cc;
             color: white;
             padding: 16px 32px;
@@ -505,7 +507,7 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            flex-shrink: 0;
+            box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
@@ -540,8 +542,12 @@
                 <div class="header">
                     <div class="header-content">
                         <div class="header-top">
-                            <img src="https://cdn.poehali.dev/files/KGS_logo_white_yellow.png" alt="КГС" class="logo-main">
-                            <div class="badge">10+ лет на рынке</div>
+                            <div class="header-top-cell">
+                                <img src="https://cdn.poehali.dev/files/KGS_logo_white_yellow.png" alt="КГС" class="logo-main">
+                            </div>
+                            <div class="header-top-cell">
+                                <div class="badge">10+ лет на рынке</div>
+                            </div>
                         </div>
                         
                         <h1>Оборудование и машины<br>для строительства свайных фундаментов</h1>
