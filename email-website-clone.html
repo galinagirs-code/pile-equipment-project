@@ -47,7 +47,7 @@
         /* Header Section */
         .header {
             position: relative;
-            background-image: url('https://cdn.poehali.dev/files/с%20полом.png');
+            background-image: url('https://cdn.poehali.dev/files/Фото%20рассылка.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -106,6 +106,9 @@
             font-size: 14px;
             font-weight: 600;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: auto;
+            white-space: nowrap;
         }
         
         .header h1 {
@@ -470,6 +473,7 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
+            flex-shrink: 0;
         }
         
         @media (min-width: 768px) {
@@ -501,6 +505,7 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
+            flex-shrink: 0;
         }
         
         @media (min-width: 768px) {
