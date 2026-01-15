@@ -110,7 +110,15 @@
         }
         
         .badge {
-            display: none;
+            background: #F6A327;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            white-space: nowrap;
         }
         
         .header h1 {
@@ -170,7 +178,7 @@
             color: #F6A327;
             font-size: 20px;
             font-weight: bold;
-            line-height: 1.6;
+            line-height: 1;
             flex-shrink: 0;
         }
         
@@ -293,23 +301,21 @@
             gap: 8px;
             background: #F6A327;
             color: white;
-            padding: 16px 20px;
+            padding: 16px 32px;
             border-radius: 12px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
             text-decoration: none;
             box-shadow: 0 10px 15px -3px rgba(246, 163, 39, 0.3);
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-primary {
                 width: auto;
                 padding: 20px 32px;
-                font-size: 16px;
             }
         }
         
@@ -384,21 +390,14 @@
             color: #F6A327;
             font-size: 20px;
             font-weight: bold;
-            line-height: 1.6;
+            line-height: 1;
             flex-shrink: 0;
-            margin-top: 0;
+            margin-top: 2px;
         }
         
         .service-text {
             color: #273369;
             line-height: 1.6;
-            font-size: 16px;
-        }
-        
-        @media (min-width: 768px) {
-            .service-text {
-                font-size: 18px;
-            }
         }
         
         /* Footer */
@@ -440,18 +439,15 @@
         }
         
         .footer-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            display: block;
             margin-top: 24px;
         }
         
         @media (min-width: 768px) {
             .footer-buttons {
                 flex-direction: row;
-                justify-content: center;
                 align-items: center;
-                gap: 16px;
+                gap: 32px;
             }
         }
         
@@ -471,14 +467,14 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            margin: 0;
+            margin-bottom: 16px;
             box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-outline {
                 width: auto;
-                padding: 20px 32px;
+                padding: 20px 40px;
             }
         }
         
@@ -504,14 +500,13 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            margin: 0;
             box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-telegram {
                 width: auto;
-                padding: 20px 32px;
+                padding: 20px 40px;
             }
         }
         
@@ -543,7 +538,9 @@
                             <div class="header-top-cell">
                                 <img src="https://cdn.poehali.dev/files/KGS_logo_white_yellow.png" alt="КГС" class="logo-main">
                             </div>
-
+                            <div class="header-top-cell">
+                                <div class="badge">10+ лет на рынке</div>
+                            </div>
                         </div>
                         
                         <h1>Оборудование и машины<br>для строительства свайных фундаментов</h1>
