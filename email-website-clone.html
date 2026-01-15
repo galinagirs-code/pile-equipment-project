@@ -170,7 +170,7 @@
             color: #F6A327;
             font-size: 20px;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.6;
             flex-shrink: 0;
         }
         
@@ -293,21 +293,23 @@
             gap: 8px;
             background: #F6A327;
             color: white;
-            padding: 16px 32px;
+            padding: 16px 20px;
             border-radius: 12px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
             text-decoration: none;
             box-shadow: 0 10px 15px -3px rgba(246, 163, 39, 0.3);
             transition: all 0.3s;
             width: 100%;
             text-align: center;
+            box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-primary {
                 width: auto;
                 padding: 20px 32px;
+                font-size: 16px;
             }
         }
         
@@ -382,14 +384,21 @@
             color: #F6A327;
             font-size: 20px;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.6;
             flex-shrink: 0;
-            margin-top: 2px;
+            margin-top: 0;
         }
         
         .service-text {
             color: #273369;
             line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .service-text {
+                font-size: 18px;
+            }
         }
         
         /* Footer */
@@ -431,15 +440,18 @@
         }
         
         .footer-buttons {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
             margin-top: 24px;
         }
         
         @media (min-width: 768px) {
             .footer-buttons {
                 flex-direction: row;
+                justify-content: center;
                 align-items: center;
-                gap: 32px;
+                gap: 16px;
             }
         }
         
@@ -459,14 +471,14 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
-            margin-bottom: 16px;
+            margin: 0;
             box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-outline {
                 width: auto;
-                padding: 20px 40px;
+                padding: 20px 32px;
             }
         }
         
@@ -492,13 +504,14 @@
             transition: all 0.3s;
             width: 100%;
             text-align: center;
+            margin: 0;
             box-sizing: border-box;
         }
         
         @media (min-width: 768px) {
             .btn-telegram {
                 width: auto;
-                padding: 20px 40px;
+                padding: 20px 32px;
             }
         }
         
