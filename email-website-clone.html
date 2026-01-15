@@ -110,16 +110,7 @@
         }
         
         .badge {
-            background: #F6A327;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            white-space: nowrap;
-            max-width: 150px;
+            display: none;
         }
         
         .header h1 {
@@ -176,18 +167,11 @@
         }
         
         .check-icon {
-            width: 22px;
-            height: 22px;
-            background: #F6A327;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: white;
-            font-size: 16px;
+            color: #F6A327;
+            font-size: 20px;
             font-weight: bold;
             line-height: 1;
+            flex-shrink: 0;
         }
         
         .benefit-text {
@@ -395,19 +379,12 @@
         }
         
         .service-check {
-            width: 22px;
-            height: 22px;
-            background: #F6A327;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-top: 2px;
-            color: white;
-            font-size: 16px;
+            color: #F6A327;
+            font-size: 20px;
             font-weight: bold;
             line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
         
         .service-text {
@@ -467,10 +444,13 @@
         }
         
         .btn-outline {
-            display: block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background: #F6A327;
             color: white;
-            padding: 16px 32px;
+            padding: 16px 24px;
             border-radius: 12px;
             font-weight: 600;
             font-size: 16px;
@@ -486,7 +466,7 @@
         @media (min-width: 768px) {
             .btn-outline {
                 width: auto;
-                padding: 20px 32px;
+                padding: 20px 40px;
             }
         }
         
@@ -497,10 +477,13 @@
         }
         
         .btn-telegram {
-            display: block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background: #0088cc;
             color: white;
-            padding: 16px 32px;
+            padding: 16px 24px;
             border-radius: 12px;
             font-weight: 600;
             font-size: 16px;
@@ -515,7 +498,7 @@
         @media (min-width: 768px) {
             .btn-telegram {
                 width: auto;
-                padding: 20px 32px;
+                padding: 20px 40px;
             }
         }
         
@@ -547,9 +530,7 @@
                             <div class="header-top-cell">
                                 <img src="https://cdn.poehali.dev/files/KGS_logo_white_yellow.png" alt="КГС" class="logo-main">
                             </div>
-                            <div class="header-top-cell">
-                                <div class="badge">10+ лет на рынке</div>
-                            </div>
+
                         </div>
                         
                         <h1>Оборудование и машины<br>для строительства свайных фундаментов</h1>
